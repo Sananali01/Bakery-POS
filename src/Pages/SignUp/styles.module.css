@@ -1,0 +1,123 @@
+/* Signup css */
+body {
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  background-color: #0b121e;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+  width: 100vw !important;
+  text-align: center;
+  overflow-x: hidden;
+  color: #fff; /* /* z-index: 0 !important;
+
+  
+  background-attachment:fixed;
+   */
+}
+.header2 {
+  margin: 0rem 0 0rem 0;
+  z-index: 2;
+}
+
+/* Styling for the main container */
+.main {
+  display: flex;
+  align-items: center;
+  /* Center the content vertically */
+  justify-content: center;
+  /* Center the content horizontally */
+  min-height: 100vh;
+  /* Set the minimum height of the container to 100% of the viewport height */
+  color: #93a0b4;
+  /* Text color */
+}
+.textDanger {
+  color: white;
+}
+/* Styling for the form container */
+.container {
+  background-color: #ff643c;
+  padding: 30px;
+  box-shadow: 0 0 10px #0b121e;
+  max-width: 380px;
+  line-height: 36px;
+  width: 100%;
+}
+
+.welcome_Text {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.label {
+  color: #fff;
+
+  font-size: 16px;
+  display: flex;
+  justify-content: start;
+}
+
+.styled_input {
+  border: 2px solid white;
+  background-color: white;
+  color: #0b121e;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: white;
+  /* Make the input fields fill the container width */
+}
+
+.link-button:hover {
+  background-color: #cd6b09;
+}
+
+.btn {
+  align-items: center;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 8px;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  vertical-align: baseline;
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.forgot_password {
+  color: white;
+}
+.login_with {
+  color: white;
+}
+.email {
+  display: flex;
+  justify-content: start;
+}
+.forgot_password {
+  display: flex;
+  color: rgb(202, 25, 25);
+  justify-content: start;
+}
+
+
+@media screen and (max-width:320px) {
+  .main{
+    margin-top: 25px;
+  }
+}

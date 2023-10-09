@@ -1,0 +1,117 @@
+/* signup css  */
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header2 {
+  margin: 1rem 0 1rem 0;
+}
+
+/* Styling for the main container */
+.main {
+  display: flex;
+  align-items: center;
+  /* Center the content vertically */
+  justify-content: center;
+  /* Center the content horizontally */
+  min-height: 100vh;
+  /* Set the minimum height of the container to 100% of the viewport height */
+  color: #333;
+  /* Text color */
+}
+
+/* Styling for the form container */
+.container {
+  background-color: #cf7a0a;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  /* Limit the width of the form container */
+  width: 100%;
+
+  /* Make the container responsive */
+}
+
+.welcome_Text {
+  color: #fff;
+  font-size: 46px;
+  margin-bottom: 10px;
+
+}
+
+.label {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.styled_input {
+  border: 2px solid white;
+  background-color: white;
+  color: #333;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  /* Make the input fields fill the container width */
+}
+
+.btn-primary:hover {
+  background-color: #d5701e;
+  /* Darker orange on hover */
+}
+/* Styling for the "Go to Login Page" button */
+.link-button {
+  background-color: black;
+  color: #cd6b09;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  background-color: #cd6b09;
+
+}
+
+.btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #cd6b09;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}

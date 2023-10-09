@@ -1,0 +1,83 @@
+/* CategoryPage.css */
+
+.category-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.category-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.category-title span{
+    color: #fb8332;
+}
+.product-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Use unique classes for product items */
+.product-item {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effects */
+}
+
+/* Hover effect */
+.product-item:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.product-title {
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+
+.product-image {
+    width: 100%;
+    height:auto;
+    margin: 10px 0;
+    transition: transform 0.3s ease; /* Add image transition */
+}
+
+/* Hover effect for the image */
+.product-item:hover .product-image {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.product-description {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+/* Fade-in animation for the product cards */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-item {
+    animation: fade-in 0.5s ease-in-out; /* Apply fade-in animation */
+}

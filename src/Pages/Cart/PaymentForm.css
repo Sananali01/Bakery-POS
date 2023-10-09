@@ -1,0 +1,52 @@
+/* PaymentForm.css */
+
+/* Container styles */
+.payment-form {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the form */
+}
+
+/* Label styles */
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold; /* Make labels bold */
+}
+
+/* Input styles */
+.input,
+.opt,
+.Select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+
+/* Select styles */
+.Select {
+  appearance: none; /* Remove default appearance for select */
+  background-image: url("/src/Pages/images/arrow.png.jpeg"); /* Add a custom arrow-down icon */
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px; /* Add space for the icon */
+}
+
+/* Button styles */
+button {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth hover effect */
+}

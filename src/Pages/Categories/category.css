@@ -1,0 +1,93 @@
+.categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.categories-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category-item {
+  flex-basis: calc(25% - 40px);
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.category-item:nth-child(n+5) {
+  flex-basis: calc(33.33% - 40px);
+}
+
+.category-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.browse-button {
+  align-items: center;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 8px;
+  text-decoration: none;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  vertical-align: baseline;
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.browse-button:hover {
+  color: white;
+  background-color: #0b121e;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .category-item {
+    flex-basis: calc(50% - 40px); /* 2 categories per row for tablets */
+  }
+
+  .category-item:nth-child(n+5) {
+    flex-basis: calc(50% - 40px); /* 1 category per row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .category-item {
+    flex-basis: calc(100% - 40px); /* 1 category per row for mobile */
+  }
+  .category-item:nth-child(n+5) {
+    flex-basis: calc(100% - 40px); /* 1 category per row for tablets */
+  }
+}

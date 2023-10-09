@@ -56,6 +56,8 @@ function Stock() {
     }
   };
 
+  
+
   return (
     <div className="stock-container">
       <table className="stock-table">

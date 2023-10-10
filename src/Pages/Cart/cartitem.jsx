@@ -4,6 +4,7 @@ import "./cart.css";
 
 function CartItem({ item, onRemoveFromCart, onUpdateQuantity }) {
   const [quantity, setQuantity] = useState(item.quantity);
+  console.log()
 
   const handleIncrement = () => {
     const newQuantity = quantity + 1;

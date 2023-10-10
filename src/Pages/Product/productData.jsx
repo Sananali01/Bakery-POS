@@ -41,7 +41,7 @@ const productData = [
    image: productImage1,
    category: "Cookies",
    rating: { rate: 4.5, count: 10 },
-   stock: 5,
+   stock: 10,
  },
   // Product 2
  {
@@ -52,7 +52,7 @@ const productData = [
    image: productImage2,
    category: "Donuts",
    rating: { rate: 4.0, count: 8 },
-   stock: 0,
+   stock: 10,
  },
   // Product 3
  {
@@ -63,7 +63,7 @@ const productData = [
    image: productImage3,
    category: "Donuts",
    rating: { rate: 4.2, count: 12 },
-   stock: 0,
+   stock: 10,
  },
   // Product 4
  {
@@ -74,7 +74,7 @@ const productData = [
    image: productImage4,
    category: "Pie",
    rating: { rate: 4.8, count: 15 },
-   stock: 0,
+   stock: 10,
  },
   // Product 5
  {
@@ -85,7 +85,7 @@ const productData = [
    image: productImage5,
    category: "Pie",
    rating: { rate: 3.9, count: 7 },
-   stock: 0,
+   stock: 10,
  },
   // Product 6
  {
@@ -96,7 +96,7 @@ const productData = [
    image: productImage6,
    category: "Beverages",
    rating: { rate: 4.4, count: 11 },
-   stock: 0,
+   stock: 10,
  },
   // Product 7
  {
@@ -107,7 +107,7 @@ const productData = [
    image: productImage7,
    category: "Beverages",
    rating: { rate: 3.7, count: 9 },
-   stock: 0,
+   stock: 10,
  },
  // Product 8
  {
@@ -118,7 +118,7 @@ const productData = [
    image: productImage8,
    category: "Candy",
    rating: { rate: 4.1, count: 13 },
-   stock: 0,
+   stock: 10,
  },
  // Product 9
  {
@@ -129,7 +129,7 @@ const productData = [
    image: productImage9,
    category: "Bread",
    rating: { rate: 4.6, count: 14 },
-   stock: 0,
+   stock: 10,
  },
  // Product 10
  {
@@ -140,7 +140,7 @@ const productData = [
    image: productImage10,
    category: "Cakes",
    rating: { rate: 4.2, count: 11 },
-   stock: 0,
+   stock: 10,
  },
  // Product 11
  {
@@ -151,7 +151,7 @@ const productData = [
    image: productImage11,
    category: "Bread",
    rating: { rate: 4.7, count: 17 },
-   stock: 0,
+   stock: 10,
  },
  // Product 12
  {
@@ -162,7 +162,7 @@ const productData = [
    image: productImage12,
    category: "Cakes",
    rating: { rate: 4.3, count: 9 },
-   stock: 0,
+   stock: 10,
  },
  // Product 13
  {
@@ -173,7 +173,7 @@ const productData = [
    image: productImage13,
    category: "Cakes",
    rating: { rate: 4.5, count: 10 },
-   stock: 0,
+   stock: 10,
  },
  // Product 14
  {
@@ -184,7 +184,7 @@ const productData = [
    image: productImage14,
    category: "Bread",
    rating: { rate: 4.0, count: 8 },
-   stock: 0,
+   stock: 10,
  },
  // Product 15
  {
@@ -195,7 +195,7 @@ const productData = [
    image: productImage15,
    category: "Cakes",
    rating: { rate: 4.2, count: 12 },
-   stock: 0,
+   stock: 10,
  },
  // Product 16
  {
@@ -206,7 +206,7 @@ const productData = [
    image: productImage16,
    category: "Bread",
    rating: { rate: 4.6, count: 16 },
-   stock: 0,
+   stock: 10,
  },
   // Product 17
   {
@@ -217,7 +217,7 @@ const productData = [
    image: productImage17,
    category: "Bread",
    rating: { rate: 4.3, count: 12 },
-   stock: 0,
+   stock: 10,
  },
  // Product 18
  {
@@ -228,7 +228,7 @@ const productData = [
    image: productImage18,
    category: "Bread",
    rating: { rate: 4.7, count: 15 },
-   stock: 0,
+   stock: 10,
  },
  // Product 19
  {
@@ -239,7 +239,7 @@ const productData = [
    image: productImage19,
    category: "Bread",
    rating: { rate: 4.8, count: 18 },
-   stock: 0,
+   stock: 10,
  },
  // Product 20
  {
@@ -250,7 +250,7 @@ const productData = [
    image: productImage20,
    category: "Cakes",
    rating: { rate: 4.5, count: 14 },
-   stock: 0,
+   stock: 10,
  },
  // Product 21
  {
@@ -261,7 +261,7 @@ const productData = [
    image: productImage21,
    category: "Candy",
    rating: { rate: 4.2, count: 9 },
-   stock: 0,
+   stock: 10,
  },
  // Product 22
  {
@@ -272,7 +272,7 @@ const productData = [
    image: productImage22,
    category: "Cakes",
    rating: { rate: 4.9, count: 20 },
-   stock: 0,
+   stock: 10,
  },
  // Product 23
  {
@@ -283,7 +283,7 @@ const productData = [
    image: productImage23,
    category: "Cakes",
    rating: { rate: 4.4, count: 11 },
-   stock: 0,
+   stock: 10,
  },
 
  // Product 24
@@ -295,7 +295,7 @@ const productData = [
    image: productImage24,
    category: "Cookies",
    rating: { rate: 4.0, count: 8 },
-   stock: 0,
+   stock: 10,
  },
  // Product 25
  {
@@ -306,7 +306,7 @@ const productData = [
    image: productImage25,
    category: "Cookies",
    rating: { rate: 4.3, count: 13 },
-   stock: 0,
+   stock: 10,
  },
  // Product 26
  {
@@ -317,7 +317,7 @@ const productData = [
    image: productImage26,
    category: "Beverages",
    rating: { rate: 4.6, count: 16 },
-   stock: 0,
+   stock: 10,
  },
  // Product 27
  {
@@ -328,7 +328,7 @@ const productData = [
    image: productImage27,
    category: "Beverages",
    rating: { rate: 4.2, count: 12 },
-   stock: 0,
+   stock: 10,
  },
  // Product 28
  {
@@ -339,7 +339,7 @@ const productData = [
    image: productImage28,
    category: "Pie",
    rating: { rate: 4.5, count: 14 },
-   stock: 0,
+   stock: 10,
  },
  // Product 29
  {
@@ -350,7 +350,7 @@ const productData = [
    image: productImage29,
    category: "Pie",
    rating: { rate: 4.4, count: 10 },
-   stock: 0,
+   stock: 10,
  },
 
  // Product 30
@@ -362,7 +362,7 @@ const productData = [
    image: productImage30,
    category: "Donuts",
    rating: { rate: 4.7, count: 19 },
-   stock: 0,
+   stock: 10,
  },
  {
    id: 31,
@@ -372,7 +372,7 @@ const productData = [
    image: productImage31,
    category: "Donuts",
    rating: { rate: 4.7, count: 19 },
-   stock: 0,
+   stock: 10,
  },
  {
    id: 32,
@@ -382,7 +382,7 @@ const productData = [
    image: productImage32,
    category: "Cookies",
    rating: { rate: 4.7, count: 19 },
-   stock: 0,
+   stock: 10,
  },
 ];
 

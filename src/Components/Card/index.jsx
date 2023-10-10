@@ -41,6 +41,8 @@ function Card({ image, title, price, productId, stock, deductedAmount }) {
         Add to Cart
       </button>
     </div>
+
+    
   );
 }
 

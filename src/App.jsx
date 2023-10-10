@@ -16,7 +16,7 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Checkout from "./Pages/Cart/Checkout";
 import CategoryPage from "./Pages/Categories/CategoryPage";
-import Cartsystem from "./Pages/Cart/cartsystem";
+import Cartsystem from "./Pages/Cart/Cartsystem";
 import Stock from "./Pages/Admin/Stock";
 
 export const UserAuthContext = createContext();

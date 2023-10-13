@@ -28,6 +28,7 @@
     font-size: 16px;
     margin-bottom: 8px;
     color: #555;
+    font-weight: bold;
   }
   
   .product-details table {
@@ -37,13 +38,13 @@
   }
   
   .product-details th, .product-details td {
-    border: 1px solid #ccc;
+    border: 2px solid #000000;
     padding: 8px;
     text-align: left;
   }
   
   .product-details th {
-    background-color: #000000;
+    background-color: #ff643c;
     color: #fff;
   }
   
@@ -62,9 +63,29 @@
   }
   
 .total-amount{
+  
   color: #000000;
   margin-top: 20px;
   display: flex;
   justify-content: center;
+}
+
+.total-amount p{
+  border: 2px solid black;
+  border-radius: 23px;
+  font-size: larger;
+  padding: 15px;
+}
+
+.product-details td{
+  color: #000000;
+}
+
+@media (max-width: 345px) {
+
+  .product-details table {
+    display: block;
+
+  }
 }
 

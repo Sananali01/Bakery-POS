@@ -25,7 +25,7 @@ margin-bottom: 10px;
 }
 /* Table header styles */
 .invoice-table th {
-  background-color: #000000;
+  background-color: #ff643c;
   color: #fff;
   padding: 10px;
   text-align: left; /* Align header text to the left */
@@ -35,7 +35,7 @@ margin-bottom: 10px;
 /* Table cell styles */
 .invoice-table td {
   padding: 10px;
-  border: 1px solid #e0e0e0;
+  border: 2px solid #000000;
 }
 
 /* Responsive styles for smaller screens */

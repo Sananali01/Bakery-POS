@@ -24,10 +24,12 @@ function PaymentSlip({ customerInfo, paymentMethod, amount, cart }) {
     margin-top: 50px;
   }
   .customer-info h3 {
+    color: black;
     font-size: 18px;
   }
 
   .customer-info p {
+   
     font-size: 18px;
   }
 
@@ -36,11 +38,22 @@ function PaymentSlip({ customerInfo, paymentMethod, amount, cart }) {
         border-collapse: collapse;
         margin-top: 10px;
       }
-
+      .product-details h3{
+        color:black;
+      }
       .product-details th, .product-details td {
-        border: 1px solid #ccc;
+
+        border: 2px solid black;
         padding: 8px;
         text-align: left;
+      }
+
+      .product-details thead {
+        background: #ff643c;
+        color:white;
+      }
+      h3{
+        color:black;
       }
 
       .print-button {
@@ -51,6 +64,9 @@ function PaymentSlip({ customerInfo, paymentMethod, amount, cart }) {
         font-size: 20px;
       }
 
+      .payment-method p{
+        font-size: larger;
+      }
     </style>
   `);
     newWindow.document.write(printContent.innerHTML); // Copy the payment slip content
@@ -94,10 +110,10 @@ function PaymentSlip({ customerInfo, paymentMethod, amount, cart }) {
           <tbody>
             {cart.map((item) => (
               <tr key={item.id}>
-                <td style={{ color: "black" }}>{item.title}</td>
-                <td style={{ color: "black" }}>${item.price}</td>
-                <td style={{ color: "black" }}>{item.quantity}</td>
-                <td style={{ color: "black" }}>
+                <td >{item.title}</td>
+                <td >${item.price}</td>
+                <td >{item.quantity}</td>
+                <td >
                   ${item.price * item.quantity}
                 </td>
               </tr>

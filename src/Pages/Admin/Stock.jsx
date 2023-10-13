@@ -101,6 +101,51 @@ function Stock() {
     // Print only the invoice section when the invoice button is clicked
     const invoiceContainer = document.getElementById("invoice-container");
     const invoiceWindow = window.open("", "_blank");
+    const customCss = `
+    <style>
+
+
+      .invoice-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+      }
+      
+      .invoice-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .invoice-table th {
+        background-color: #ff643c;
+        color: #fff;
+        padding: 10px;
+        text-align: left;
+        border: 2px solid #444;
+      }
+
+      .invoice-table td {
+        padding: 10px;
+        border: 2px solid black;
+      }
+      
+      /* Additional styles for the printed invoice content */
+      .in-head {
+        display:none;
+      }
+      
+      /* Add more custom styles as needed for the printed invoice */
+
+    </style>
+  `;
+
+  // Write the custom CSS and invoice content to the print window
+  invoiceWindow.document.write(customCss);
     invoiceWindow.document.write(invoiceContainer.innerHTML);
     invoiceWindow.document.close();
     invoiceWindow.print();

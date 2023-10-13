@@ -14,10 +14,10 @@ import PaymentForm from "./Pages/Cart/PaymentForm";
 import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
-import Checkout from "./Pages/Cart/Checkout";
 import CategoryPage from "./Pages/Categories/CategoryPage";
 import Cartsystem from "./Pages/Cart/Cartsystem";
 import Stock from "./Pages/Admin/Stock";
+import Invoices from "./Pages/Admin/Invoices";
 
 export const UserAuthContext = createContext();
 export const CartContext = createContext();
@@ -66,7 +66,6 @@ function App() {
           value={{ cart, addToCart, removeFromCart, updateQuantity }}
         >
           <Routes>
-        
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<SignUp />} />
             <Route path="/" element={<PageContainer />}>
@@ -74,15 +73,15 @@ function App() {
               <Route path="About" element={<About />} />
               <Route path="Categories" element={<Categories />} />
               <Route path="/category/:category" element={<CategoryPage />} />
-              <Route path="Checkout" element={<Checkout/>} />
-              <Route path="/PaymentForm" element={<PaymentForm/>} />
-              <Route path="/Stock" element={<Stock/>} />
+              <Route path="/PaymentForm" element={<PaymentForm cart={cart} />} />
+              <Route path="/Stock" element={<Stock  />} />
+              <Route path="/Invoices" element={<Invoices />} />
               <Route path="/Cartsystem" element={<Cartsystem />} />
 
               {/* nestin route */}
 
               <Route path="/Product" element={<Product />} />
-              
+
               <Route path="Product" element={<Product />} />
               {/* <Route path="Product"> */}
               <Route path="product-detail">
@@ -99,14 +98,8 @@ function App() {
 
             <Route
               path="/checkout"
-              element={
-                <PrivateRoute>
-                  <Checkout />
-                </PrivateRoute>
-              }
+              element={<PrivateRoute></PrivateRoute>}
             ></Route>
-
-
           </Routes>
         </CartContext.Provider>
       </UserAuthContext.Provider>

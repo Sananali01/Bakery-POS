@@ -66,79 +66,77 @@
   border-radius: 4px;
 }
 
-.stock-deduction-input{
+.stock-deduction-input {
   padding: 8px;
   background: #ffffff;
 }
 
+.invoice-button {
+  text-decoration: none;
+  background-color: #fb8332;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 /* Responsive design for all breakpoints */
 
-
-
-
-@media (min-width: 1025px) and (max-width: 1140px) {
-
+@media (min-width: 1025px) and (max-width: 1220px) {
   .stock-table tbody {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap; 
-}
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.stock-table thead tr{
-display: inline;
-}
+  .stock-table thead tr {
+    display: inline;
+  }
 
-
-.stock-table tr {
-
-  margin-left: 65px;
-    margin-bottom: 10px; 
+  .stock-table tr {
+    margin-left: 65px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; 
-}
+    text-align: center;
+  }
 
   .stock-table th,
   .stock-table td {
     padding: 10px;
     font-size: 14px;
   }
-
 }
-
-
-
-
 
 @media (max-width: 1024px) {
-
-
   .stock-table tbody {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap; 
-}
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.stock-table thead tr{
-  display: inline;
- }
- 
-.stock-table tr {
-  margin-left: 37px;
-    margin-bottom: 10px; 
+  .stock-table thead tr {
+    display: inline;
+  }
+
+  .stock-table tr {
+    margin-left: 37px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; 
-}
+    text-align: center;
+  }
 
   .stock-table th,
   .stock-table td {
     padding: 10px;
     font-size: 14px;
   }
-
 
   /* Further reduce font size for very small screens */
   .stock-table th,
@@ -149,33 +147,31 @@ display: inline;
 }
 
 @media (max-width: 1007px) {
-  .stock-table thead tr{
+  .stock-table thead tr {
     display: inline;
-   }
-   
+  }
 
   .stock-table tbody {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap; 
-}
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-
-.stock-table tr {
-  margin-left: 64px;
-    margin-bottom: 10px; 
+  .stock-table tr {
+    margin-left: 64px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; 
-}
+    text-align: center;
+  }
 
   .stock-table th,
   .stock-table td {
     padding: 10px;
     font-size: 14px;
   }
-
 
   /* Further reduce font size for very small screens */
   .stock-table th,
@@ -185,35 +181,31 @@ display: inline;
   }
 }
 @media (max-width: 850px) {
-
-  .stock-table thead tr{
+  .stock-table thead tr {
     display: inline;
-   }
-   
+  }
 
   .stock-table tbody {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap; 
-}
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-
-
-.stock-table tr {
-  margin-left: 37px;
+  .stock-table tr {
+    margin-left: 37px;
     margin-bottom: 10px; /* Add spacing between rows */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center-align table rows */
     text-align: center; /* Center-align table cell text */
-}
+  }
 
   .stock-table th,
   .stock-table td {
     padding: 10px;
     font-size: 14px;
   }
-
 
   /* Further reduce font size for very small screens */
   .stock-table th,
@@ -223,61 +215,72 @@ display: inline;
   }
 }
 
-
 @media (max-width: 767px) {
-  .stock-table thead tr{
-    display: inline;
-   }
-   
-
+  .stock-table thead tr {
+    display: grid;
+  }
 
   /* Adjust table body styles */
   .stock-table tbody {
-      display: block; /* Enable vertical scrolling for the table body */
+    display: block; /* Enable vertical scrolling for the table body */
   }
-
 
   .stock-table tr {
-      margin-bottom: 10px; /* Add spacing between rows */
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center-align table rows */
-      text-align: center; /* Center-align table cell text */
-  }
-
-
-  /* Remove table cell padding for small screens */
-  .stock-table td {
-      font-size: 20px;
-      padding: 5px;
-  }
-}
-
-
-
-@media (max-width: 560px) {
-.stock-table thead tr{
-  display: grid;
- }
- 
-
-.stock-table tbody {
-    display: block; /* Enable vertical scrolling for the table body */
-}
-
-
-.stock-table tr {
     margin-bottom: 10px; /* Add spacing between rows */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center-align table rows */
     text-align: center; /* Center-align table cell text */
-}
+  }
 
-
-/* Remove table cell padding for small screens */
-.stock-table td {
+  /* Remove table cell padding for small screens */
+  .stock-table td {
     font-size: 20px;
     padding: 5px;
+  }
 }
+
+@media (max-width: 560px) {
+  .stock-table thead tr {
+    display: grid;
+  }
+
+  .stock-table tbody {
+    display: block; /* Enable vertical scrolling for the table body */
+  }
+
+  .stock-table tr {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stock-table td {
+    font-size: 20px;
+    padding: 5px;
+  }
 }
+
+
+@media (max-width: 400px) {
+  .stock-deduction-input {
+    display: block;
+
+  }
+  
+  .stock-container{
+    margin: 0;
+    padding: 0;
+  }
+  .stock-table thead  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+
+

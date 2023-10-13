@@ -4,7 +4,7 @@ import { CartContext } from '../../App';
 import { useNavigate } from 'react-router-dom';
 import "./styles.css"
 
-function Card({ image, title, price, productId, stock, deductedAmount }) {
+function Card({ image, title, price, productId, stock }) {
   const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
 
@@ -31,13 +31,13 @@ function Card({ image, title, price, productId, stock, deductedAmount }) {
       <img src={image} alt={title} className="card-image" />
       <h2 className="card-title">{title}</h2>
       <p className="card-stock">
-        Stock: {stock} {deductedAmount > 0 && `(-${deductedAmount})`}
+        Stock: {stock} 
       </p>
       <p className="card-price">${price}</p>
       <button className="buttons" onClick={onClickHandler}>
         View Details
       </button>
-      <button className="buttons" onClick={handleAddToCart} disabled={stock <= 0}>
+      <button className="buttons" onClick={handleAddToCart} disabled={stock <= 0}>  
         Add to Cart
       </button>
     </div>
@@ -52,7 +52,6 @@ Card.propTypes = {
   price: PropTypes.number.isRequired,
   productId: PropTypes.number.isRequired,
   stock: PropTypes.number.isRequired,
-  deductedAmount: PropTypes.number.isRequired, // Add deductedAmount prop
 };
 
 export default Card;

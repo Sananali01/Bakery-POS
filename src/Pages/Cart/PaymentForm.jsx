@@ -1,9 +1,58 @@
 import { useState } from 'react';
 import './PaymentForm.css'; // Import CSS
+import PaymentSlip from '../Admin/PaymentSlip';
+import { PropTypes } from 'prop-types';
 
-function PaymentForm() {
+function PaymentForm(props) {
+
+
+  const { cart } = props;
+
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postalCode, setPostalCode] = useState('');
+  const [country, setCountry] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('ATM');
-  const [formData, setFormData] = useState({}); // Store form data
+  const [formData, setFormData] = useState({});
+  const [showPaymentSlip, setShowPaymentSlip] = useState(false);
+  const [customerInfo, setCustomerInfo] = useState({});
+
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleAddressChange = (e) => {
+    setAddress(e.target.value);
+  };
+
+  const handleCityChange = (e) => {
+    setCity(e.target.value);
+  };
+
+  const handlePostalCodeChange = (e) => {
+    setPostalCode(e.target.value);
+  };
+
+  const handleCountryChange = (e) => {
+    setCountry(e.target.value);
+  };
+
+
+
+  
 
   // Define form fields for each payment method
   const atmFields = (
@@ -34,7 +83,7 @@ function PaymentForm() {
       />
       <label className='label'>Amount:</label>
       <input
-        type="text"
+        type="number"
         className='input'
         name="amount"
         value={formData.amount || ''}
@@ -72,7 +121,7 @@ function PaymentForm() {
       />
       <label className='label'>Amount:</label>
       <input
-        type="text"
+        type="number"
         className='input'
         name="amount"
         value={formData.amount || ''}
@@ -110,7 +159,7 @@ function PaymentForm() {
       />
       <label className='label'>Amount:</label>
       <input
-        type="text"
+        type="number"
         className='input'
         name="amount"
         value={formData.amount || ''}
@@ -126,15 +175,126 @@ function PaymentForm() {
     setFormData({}); // Reset form data when payment method changes
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted data:', formData);
-    // You can add logic here to handle the form submission, e.g., sending data to a server.
-  };
+    // Prepare customerInfo, productDetails, and paymentMethod data
 
-  return (
-    <div className="payment-form">
+    const customerInfoData = {
+      name,
+      email,
+      phone,
+      address,
+      city,
+      postalCode,
+      country,
+      // Add more customer information fields
+    };
+
+
+
+
+    setCustomerInfo(customerInfoData);
+    setShowPaymentSlip(true);
+  };
+  
+
+
+  return (<>
+
+  <div className='paymentpage'>
+
+
+  <div className="billing-form">
+      <h3>Checkout Information</h3>
+      <form onSubmit={handleSubmit} className="checkout-form">
+        <div className="forms-row">
+          <div className="form-group2">
+            <input className='formtext'
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+              placeholder="Full Name"
+              required
+            />
+          </div>
+          <div className="form-group2">
+            <input className='formtext'
+              type="email"
+              value={email}
+              onChange={handleEmailChange}
+              placeholder="Email"
+              required
+            />
+          </div>
+        </div>
+        <div className="forms-row">
+          <div className="form-group2">
+            <input className='formtext'
+              type="tel"
+              value={phone}
+              onChange={handlePhoneChange}
+              placeholder="Phone"
+              required
+            />
+          </div>
+          <div className="form-group2">
+            <input className='formtext'
+              type="text"
+              value={address}
+              onChange={handleAddressChange}
+              placeholder="Address"
+              required
+            />
+          </div>
+          <div className="form-group2">
+            <input className='formtext'
+              type="text"
+              value={city}
+              onChange={handleCityChange}
+              placeholder="City"
+              required
+            />
+          </div>
+        </div>
+        <div className="forms-row">
+          <div className="form-group2">
+            <input className='formtext'
+              type="text"
+              value={postalCode}
+              onChange={handlePostalCodeChange}
+              placeholder="Postal Code"
+              required
+            />
+          </div>
+          <div className="form-group2">
+            <select className='formtext'
+              value={country}
+              onChange={handleCountryChange}
+              required
+              
+            >
+              <option value="">Select Country</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="UK">UK</option>
+              <option value="Australia">Australia</option>
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+              <option value="India">India</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Japan">Japan</option>
+            </select>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+
+    <div className="payment-container-fluid">
+      <div className="payment-form">
       <h2>Payment Method:</h2>
       <select value={paymentMethod} onChange={handlePaymentMethodChange} className='Select'>
         <option className='opt' value="ATM">ATM</option>
@@ -149,8 +309,42 @@ function PaymentForm() {
 
         <button type="submit">Submit Payment</button>
       </form>
+
+      </div>
+
+     
+      
     </div>
-  );
+
+    
+  </div>
+
+
+  <div className="payslip">
+        {showPaymentSlip && cart && (
+          <PaymentSlip
+            customerInfo={customerInfo}
+            paymentMethod={paymentMethod}
+            amount={formData.amount}
+            cart={cart} // Pass the cart data to the PaymentSlip component
+          />
+        )}
+      </div>
+
+</>
+
+);
 }
+
+
+PaymentForm.propTypes = {
+  cart: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    quantity: PropTypes.number,
+    // Add more prop types for your cart items
+  })),
+};
 
 export default PaymentForm;

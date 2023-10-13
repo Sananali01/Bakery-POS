@@ -1,10 +1,14 @@
-/* PaymentForm.css */
 
 /* Container styles */
+.paymentpage{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .payment-form {
-  max-width: 450px;
-  margin: 30px auto;
-  padding: 20px;
+  width: 350px;
+  margin: 30px ;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -49,4 +53,59 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s; /* Add a smooth hover effect */
+}
+
+.billing-form {
+  max-width: 600px;
+  margin: 30px ;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #ff643c;
+}
+
+.billing-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.forms-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group2 {
+  flex: 1;
+}
+
+.formtext {
+  display: block;
+  width: 85%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .billing-form {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .forms-row {
+    flex-direction: column;
+  }
+
+  .formtext {
+    width: 100%;
+  }
+
+  .payment-form {
+    width: auto;
+  }
+
+  /* You can add additional responsive styles as needed */
 }
